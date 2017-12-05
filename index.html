@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pocket Camp</title>
+    <link rel="icon" href="goldie-icon.png" sizes="16x16">
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-base64.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha1.js"></script>
+    <script type="text/javascript" src="ajax.js"></script>
+    <script src="parse-response.js"></script>
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+            <h1 class="col-sm-8">
+                <img src="Pocket-Camp.png" width="150">
+            </h1>
+            <nav class="col-sm-4">
+                <ul style="list-style-type:none">
+                    <li><a class ="active" href="index.html">Home</a></li>
+                    <li><a href="cool.html">Cool</a></li>
+                    <li><a href="cute.html">Cute</a></li>
+                    <li><a href="natural.html">Natural</a></li>
+                    <li><a href="sporty.html">Sporty</a></li>
+                    <li><a href="https://ac-pocketcamp.com/en-US/site">Offical Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container2">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="cool.html">
+                    <img src="Cool.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="cute.html">
+                    <img src="Cute.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="natural.html">
+                    <img src="Natural.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="sporty.html">
+                    <img src="Sporty.png"/>
+                </a>
+            </div>
+            </div>
+    </section>
+    <footer class="container">
+        <div class="row">
+            <p class="col-sm-4">&copy; 2017 Animal Crossing Pocket Camp. All information and images came from <a href="http://animalcrossing.wikia.com/wiki/Villager_list_(Pocket_Camp)">here</a></p>
+        </div>
+    </footer>
+    <script>
+        ajax("https://api.twitter.com/1.1/search/tweets.json?q=%23pocketcamp", function(resp){
+            var response = JSON.parse(resp); 
+            console.log(response.statuses[0]);
+        });
+    </script>
+</body>
+</html>
